@@ -1,25 +1,17 @@
 <?php
 /*
+*                              
 *
-*  _____                 _            _             
-* |_   _|               | |          | |            
-*   | |  _ __ ___  _ __ | | __ _  ___| |_ ___  _ __ 
-*   | | | '_ ` _ \| '_ \| |/ _` |/ __| __/ _ \| '__|
-*  _| |_| | | | | | |_) | | (_| | (__| || (_) | |   
-* |_____|_| |_| |_| .__/|_|\__,_|\___|\__\___/|_|   
-*                 | |                               
-*                 |_|                               
-*
-* Implactor (1.4.x | 1.5.x)
+* CoreX (1.4.x | 1.5.x)
 * A plugin with some features for Minecraft: Bedrock!
 * --- = ---
 *
 * Team: ImpladeDeveloped
-* 2018 (c) Zadezter
+* 2018 (c) xXCaulDevsYT
 *
 */
 declare(strict_types=1);
-namespace Implactor;
+namespace CoreX;
 
 use pocketmine\{
 	Server, Player
@@ -90,11 +82,11 @@ class MainIR extends PluginBase implements Listener {
 	private $vanish = [];
 	
 	public function onLoad(): void{
-		$this->getLogger()->info(IR::AQUA . "Loading all resources and codes on Implactor plugin...");
+		$this->getLogger()->info(IR::BLUE . "Loading all resources and codes on CoreX plugin...");
 	}
 	
 	public function onEnable(): void{
-		$this->getLogger()->info(IR::GREEN . "Implactor plugin is now online!");
+		$this->getLogger()->info(IR::GREEN . "CoreX plugin is now online!");
 		$this->getScheduler()->scheduleRepeatingTask(new HubParticle($this, $this), 20);
                 // EVENTS \\
 		$this->getServer()->getPluginManager()->registerEvents($this, $this);
@@ -113,7 +105,7 @@ class MainIR extends PluginBase implements Listener {
         }
 	
 	public function onDisable(): void{
-		$this->getLogger()->info(IR::RED . "Implactor plugin is now offline!");
+		$this->getLogger()->info(IR::RED . "CoreX plugin is now offline!");
 		$this->getServer()->shutdown();
 	}
 	
@@ -128,12 +120,12 @@ class MainIR extends PluginBase implements Listener {
 		
                 // WHITELIST REASON \\
 		if(!$this->getServer()->isWhitelisted($player->getName())){
-			$ev->setKickMessage("§l§7[ §cNOTICE §7]\n §eThis server is currently on §fmaintenence §emode!");
+			$ev->setKickMessage("§l§7[ §cNOTICE §7]\n §eThis server is currently on §fmaintanence §emode!");
 			$ev->setCancelled(true);
 			
                         // BANNED REASON \\
 			if(!$this->getServer()->isBanned($player->getName())){
-				$ev->setKickMessage("§l§7[ §cNOTICE §7]\n §eYou got §cbanned §efrom this server!");
+				$ev->setKickMessage("§l§bCube§eX§d Network\n §r§aYou've Been Banned From CubeX Network\n§7Buy an Unban At Buycraft");
 				$ev->setCancelled(true);
 			}
 		}
@@ -148,7 +140,7 @@ class MainIR extends PluginBase implements Listener {
 		$player->getLevel()->addSound(new EndermanTeleportSound($player));
 		
                 // A PLUGIN MESSAGE WHEN THEY JOINED \\
-                $player->sendMessage("§7[§aI§6R§7]§r §bThis server is using Implactor plugin!");
+                $player->sendMessage("§7[§aM§6C§7]§r §bThis server is using CoreX plugin!");
 	}
 	
 	public function onHit(EntityDamageEvent $ev): void{
@@ -583,9 +575,9 @@ class MainIR extends PluginBase implements Listener {
 		if(strtolower($command->getName()) == "ihelp") {
 			if($sender instanceof Player){
 				if($sender->hasPermission("implactor.command.help")){
-					$sender->sendMessage("§b--( §eImplactor §aHelp §b)--");
-					$sender->sendMessage("§e/ihelp §9- §fImplactor Command List!");
-					$sender->sendMessage("§e/iabout §9- §fAbout Implactor plugin!");
+					$sender->sendMessage("§b--( §eCoreX §aHelp §b)--");
+					$sender->sendMessage("§e/ihelp §9- §fCoreX Command List!");
+					$sender->sendMessage("§e/iabout §9- §fAbout CoreX plugin!");
 					$sender->sendMessage("§e/ping §9- §fCheck your ping status on server!");
 					$sender->sendMessage("§e/feed §9- §fFeed yourself or other players when on hunger!");
 					$sender->sendMessage("§e/heal §9- §fHeal yourself or other players!");
@@ -605,7 +597,7 @@ class MainIR extends PluginBase implements Listener {
 					$sender->sendMessage("§e/freeze §9- §bFreeze §fyourself or others will make you frozen!");
 					$sender->sendMessage("§e/vanish §9- §6Vanish §fyourself or others will make you invisible!");
 					$sender->sendMessage("§e/bot §9- §fSpawn your own §cbot §fhuman!");
-					$sender->sendMessage("§e/icast §9- §bBroadcast §fmessage to all players with §dImplacast!");		     
+					$sender->sendMessage("§e/icast §9- §bBroadcast §fmessage to all players with §dCoreCast!");		     
 					$sender->sendMessage("§e/ibook §9- §fGet a §bbook §fvia command!");
                                         $sender->sendMessage("§e/size §9- §fSet your player size!");
 					return true;
@@ -616,12 +608,12 @@ class MainIR extends PluginBase implements Listener {
 			if($sender instanceof Player){
 				if($sender->hasPermission("implactor.command.about")){
 					$sender->sendMessage("§8---==============================---");
-					$sender->sendMessage(" §bImplactor §dplugin for §eMinecraft: Bedrock");
-					$sender->sendMessage("§8- §cAuthor: §fZadezter");
+					$sender->sendMessage(" §bCoreX §dplugin for §eMinecraft: Bedrock");
+					$sender->sendMessage("§8- §cAuthor: §fEmeraldAssasinYT , ZarkysMC");
 					$sender->sendMessage("§8- §bDate: §f23 §eMay §f2018");
 					$sender->sendMessage("§8- §6Latest API: §f3.0.0-ALPHA12");
 					$sender->sendMessage("§8--===---");
-					$sender->sendMessage("§3A plugin which having some of features!");
+					$sender->sendMessage("§3A plugin with advanced features");
 					$sender->sendMessage("§8---==============================---");
 					return true;
 				}
@@ -629,7 +621,7 @@ class MainIR extends PluginBase implements Listener {
 		}
 		if(strtolower($command->getName()) === "vanish") {
 			if(!$sender instanceof Player){
-				$sender->sendMessage("Please use Implactor command in-game server!");
+				$sender->sendMessage("Please use CoreX command in-game server!");
 				return false;
 			}
 			if(!$sender->hasPermission("implactor.vanish")){
@@ -734,7 +726,7 @@ class MainIR extends PluginBase implements Listener {
 			if($sender instanceof Player){
 				if($sender->hasPermission("implactor.book")){
 					$this->getImplactorBook($sender);
-					$sender->sendMessage("§6You have got a §bBook of Implactor§6!\n§fRead inside the book, ". $sender->getPlayer()->getName(). "§f!");
+					$sender->sendMessage("§6CubeX Lords Of Wisdom Have \n Senteth Forward You A Book, ". $sender->getPlayer()->getName(). "§f!");
                                         $sender->getLevel()->addSound(new FizzSound($sender));
 					return true;
 				}
@@ -770,16 +762,16 @@ class MainIR extends PluginBase implements Listener {
                  // GIVE A BOOK TO PLAYER \\
 	         public function getImplactorBook(Player $player): void{
 		     $ibook = Item::get(Item::WRITTEN_BOOK, 0, 1);
-		     $ibook->setTitle(IR::GREEN . IR::UNDERLINE . "Book of Implactor");
-		     $ibook->setPageText(0, IR::GREEN . IR::UNDERLINE . "What is Implactor?" . IR::BLACK . "\n This is just a plugin which has a features in there! This was created on 23 May 2018 with adding a less features!");
-		     $ibook->setPageText(1, IR::GREEN . IR::UNDERLINE . "How to use Implactor?" . IR::BLACK . "\n If you don't know how to use this, just a simple! Do §b/ihelp §0to check all command list available! \n\n This plugin is made by §cImpladeDeveloped§0 and the real author is §dZadezter§0!");
-		     $ibook->setAuthor("Zadezter");
+		     $ibook->setTitle(IR::GREEN . IR::UNDERLINE . "CubeX Book Of Gods");
+		     $ibook->setPageText(0, IR::GREEN . IR::UNDERLINE . "Coming Soon" . IR::BLACK . "- EmeraldAssasinYT");
+		     $ibook->setPageText(1, IR::GREEN . IR::UNDERLINE . "Coming Soon" . IR::BLACK . "- ZarkysMC");
+		     $ibook->setAuthor("ZarkysMC");
 		     $player->getInventory()->addItem($book);
 	        }
 	        
                  // MOTD \\
 	         public static function setMotd(string $motd) : void{  
-                     $this->getServer()->getNetwork()->setName("§7[§aI§6R§7]§r " .$motd);  
+                     $this->getServer()->getNetwork()->setName("§bCubeX §eNetwork " .$motd);  
                } 
 	
                // CLEAR LAGG | CLEAR ALL ITEMS \\
