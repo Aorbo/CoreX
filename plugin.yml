@@ -1,0 +1,149 @@
+name: Implactor
+version: IR-1.2.6
+api: [3.0.0-ALPHA12]
+main: Implactor\MainIR
+author: Zadezter
+
+website: http://github.com/ImpladeDeveloped/Implactor
+description: A plugin with some features for Minecraft BE
+
+commands:
+    hub:
+        description: Teleport/Return to Hub!
+        permission: implactor.hub
+    sethub:
+         description: Set a main hub location point!
+         permission: implactor.sethub
+    fly:
+         description: Turn on/off the fly ability mode!
+         permission: implactor.fly
+    gmc:
+         description: Change your gamemode to Creative mode!
+         permission: implactor.gamemode
+    gms:
+         description: Change your gamemode to Survival mode!
+         permission: implactor.gamemode
+    gma:
+         description: Change your gamemode to Adventure mode!
+         permission: implactor.gamemode
+    gmspc:
+         description: Change your gamemode to Spectator mode!
+         permission: implactor.gamemode
+    nick:
+         description: Set your nickname or default!
+         permission: implactor.nick
+    wild:
+         description: Teleport to random wild spot!
+         permission: implactor.wild
+    kill:
+         description: Kill yourself using command!
+         permission: implactor.kill
+    ping:
+         description: Ping using command!
+         permission: implactor.ping
+    clearitem:
+         description: Clear your items from inventory!
+         permission: implactor.clearinventory
+    cleararmor:
+         description: Clear your equipped armors!
+         permission: implactor.cleararmor
+    clearall:
+         description: Clear all equipped armors or items from your inventory and body!
+         permission: implactor.clearall
+    heal:
+         description: Heal yourself or other players!
+         permission: implactor.heal
+    feed:
+         description: Fed yourself ot other players when on hunger!
+         permission: implactor.feed
+    ihelp:
+         description: Implactor command info list!
+         permission: implactor.command.help
+    iabout:
+         description: About Implactor plugin!
+         permission: implactor.command.about
+    freeze:
+         description: Freeze player or yourself!
+         permission: implactor.freeze
+    vanish:
+        description: Vanish yourself or other players!
+        permission: implactor.vanish
+    bot:
+        description: Spawn a bot human with you own current equipped skin!
+        permission: implactor.bot
+    icast:
+        description: Broadcast your message to all players who online!
+        permission: implactor.broadcast
+    ibook:
+        description: Give a Book of Implactor to someone player via command!
+        permission: implactor.book
+    size:
+        description: Set your player character size!
+        permission: implactor.size
+permissions:
+    implactor.*:
+     default: op
+     description: "Allows all Implactor commands"
+    implactor.command.about:
+     description: "Allow players to check about Implactor plugin"
+     default: true
+    implactor.command.help:
+     description: "Allow players to use Implactor help command list"
+     default: true
+    implactor.hub:
+     description: "Allow players to use command to return to hub"
+     default: true
+    implactor.sethub:
+     description: "Allow OP staff members to set a main hub"
+     default: op
+    implactor.wild:
+     description: "Allow players to use command to randomly teleport to wild"
+     default: true
+    implactor.clearinventory:
+     description: "Allow OP staff members to clear their inventory"
+     default: op
+    implactor.cleararmor:
+     description: "Allow OP staff members to clear their armors"
+     default: op
+    implactor.clearall:
+     description: "Allow OP staff members to clear all of their items and armors"
+     default: op
+    implactor.fly:
+     description: "Allow players to use command to fly abilities"
+     default: op
+    implactor.gamemode:
+     description: "Allow OP staff members to changed their gamemodes"
+     default: op
+    implactor.feed:
+     description: "Allow OP staff members to fed themselves"
+     default: op
+    implactor.heal:
+     description: "Allow OP staff members to heal themselves"
+     default: op
+    implactor.kill:
+     description: "Allow OP staff members to kill themselves"
+     default: op
+    implactor.ping:
+     description: "Allow players to see their ping status"
+     default: true
+    implactor.nick:
+     description: "Allow players to nick themselves"
+     default: true
+    implactor.vanish:
+     description: "Allow OP staff members to vanish their player characters"
+     default: op
+    implactor.freeze:
+     description: "Allow OP staff members to freeze them"
+     default: op
+    implactor.bot:
+     description: "Allow OP staff members to spawn their own bot human"
+     default: op
+    implactor.broadcast:
+     description: "Allow OP staff members to broadcast messages"
+     default: op
+    implactor.book:
+     description: "Allow players to get a book via command"
+     default: true
+    implactor.size:
+     description: "Allow players to set their size"
+     default: true
