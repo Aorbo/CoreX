@@ -1,10 +1,10 @@
-name: Implactor
+name: CoreX
 version: IR-1.2.6
 api: [3.0.0-ALPHA12]
-main: Implactor\MainIR
-author: Zadezter
+main: CoreX\MainIR
+author: xXCaulDevsYT , Zadezter
 
-website: http://github.com/ImpladeDeveloped/Implactor
+website: http://github.com/xXCaulDevsYT
 description: A plugin with some features for Minecraft BE
 
 commands:
