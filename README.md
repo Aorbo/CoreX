@@ -1,24 +1,22 @@
-![start2](https://cdn.discordapp.com/attachments/345572050053890048/451397867651727360/Logopit_1527691836867.png)
+![start2](https://cdn.discordapp.com/attachments/428721226249142284/454411682824060932/playcubexmcpecom.png)
 
-| Poggit | Hit Counts |
-| :-----: | :-----: |
-[![Poggit-CI](https://poggit.pmmp.io/ci.badge/ImpladeDeveloped/Implactor/Implactor/Implade)](https://poggit.pmmp.io/ci/ImpladeDeveloped/Implactor) | [![HitCount](http://hits.dwyl.io/ImpladeDeveloped/Implactor.svg)](http://hits.dwyl.io/ImpladeDeveloped/Implactor)
 
-# Implactor
-A plugin which having a feature for Minecraft: Bedrock
+# CoreX | CubeX Network
+A Plugin Which Features Are Advanced And Made For CubeX
 
-> This is originally plugin was made by Zadezter and it<br>
-> was created on 23 May 2018!
+> 50% Of the Plugins Code is From @Zadezter <br>
+> The Original Owner of ImpladeMC
 >
-> This plugin and repisitory is under license Apache-2.0!<br>
-> Do not change the author name! I have a big eyes! xD
+> This Plugin is Copyrighted Under<br>
+> CubeX Network 2018 - 2019 (c)
 >
-> Updated on 30 May 2018
+> For more Advanced Features Please Check out the<br>
+> Website [Broken](https://google.com)
 
-Click to [download](http://poggit.pmmp.io/ci/ImpladeDeveloped/Implactor) the latest build!<br>
+Click to [download](https://poggit.pmmp.io) the latest build!<br>
 Don't download the plugin with a build error!
 
-## What's in features?
+## What's in Plugin?
 Any less specials here like;
 - [x] Gamemodes
 - [x] Death Animation
